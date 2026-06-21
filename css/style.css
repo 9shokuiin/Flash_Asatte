@@ -249,7 +249,7 @@ body {
   #flash{
     z-index: 999;
     width: 520px;
-    margin-left: 50px;
+    margin-left: 10%;
   }
   .wrap{
     width: 520px;
