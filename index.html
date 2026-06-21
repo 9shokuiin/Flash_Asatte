@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>フラッシュ明後日</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  
+  <body>
+
+    
+  <!-------------フラッシュエリア------------>
+    <section id="flash" class="flashArea">
+          <div id="flash__area">
+            <p class="flash__obj">3</p>
+            <p class="flash__obj">2</p>
+            <p class="flash__obj">1</p>
+            <p id="flash__1" class="flash__obj"></p>
+            <p id="flash__2" class="flash__obj"></p>
+            <p id="flash__3" class="flash__obj"></p>
+            <p id="flash__4" class="flash__obj"></p>
+          </div>
+    </section>
+
+    <div class="qrwrap">
+      <div class="qr"></div>
+
+      <div class="wrap">
+        <h1 class="title">フラッシュ明後日</h1>
+
+        <section id="start__game" class="none"></section>
+
+        <section id='start__today'>
+          
+          <ul class="today">
+            <li class="today__list">
+              <p id="today__year" class="today__number"></p>
+              <p class="today__year2 today__text">年</p>
+            </li>
+
+            <li class="today__list">
+              <p id="today__month" class="today__number"></p>
+              <p class="today__month2 today__text">月</p>
+            </li>
+
+            <li class="today__list">
+              <p id="today__date" class="today__number"></p>
+              <p class="today__date2 today__text">日</p>
+            </li>
+          </ul>
+
+          <section id="result">
+            <p id="result__wrap" class="result__content"><img id="resultMaru" class="resultImg maru" src="image/maru.png" alt=""></p>
+            <p id="result__wrap" class="result__content"><img id="resultBatu" class="resultimg batu" src="image/batu.png" alt=""></p>
+          </section>
+          
+          <form method="post" action="" id="start__form"><!--postで情報を送信-->
+              <button type='button' name="startButton" id="start__button" class="btn">スタート</button><!--type=submitでname=startbuttonの情報を送信-->
+          </form>
+
+        </section>
+      
+
+
+  <!-------------選択肢ボタン------------>
+
+        <section id="option">
+          <button id="option1" class="optionButton option__button--1 btn"></button>
+          <button id="option2" class="optionButton option__button--2 btn"></button>
+          <button id="option3" class="optionButton option__button--3 btn"></button>
+          <button id="option4" class="optionButton option__button--4 btn"></button>
+        </section>
+
+  <!--答え合わせ、もう一度-->
+
+        
+
+        <section id="again">
+          <button onclick="location.reload()" id="againButton" class="againButton btn">もういちど</button>
+        </section>
+      </div>
+    </div>
+
+  <script src="javascript/js.js"></script>
+  </body>
+
+</html>

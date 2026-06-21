@@ -1,0 +1,281 @@
+@charset "UTF-8";
+body {
+  background: #fff;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  margin: 0;
+  padding: 0;
+  /* overflow-y: hidden; */
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  height: 100vh;
+}
+
+.btn{
+  display: block;
+  width: 90%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 0 auto;
+  background-color: #fff;
+  text-decoration: none;
+  color: #4999e9;
+  border: solid 2px #4999e9;
+  border-radius: 3px;
+  /* transition: .2s; *//*暗転の邪魔*/
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #67c5ff;
+  color: white;
+}
+
+.none{
+  visibility: hidden;
+}
+
+.qr{
+  display: none;
+}
+/*---------------title-----------*/
+
+
+.title {
+  padding: 30px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.5em;
+}
+
+.today {
+  display: flex;
+  padding: 0;
+  justify-content: center;
+}
+
+.today__list{
+  list-style: none;
+  display: flex;
+  align-items: end;
+}
+
+.today__number{
+  font-size: 2em;
+}
+
+.today__text{
+  padding-bottom: 7px;
+}
+
+
+
+/*---------------startbutton---------------*/
+#start__today {
+  display: block;
+  width: 100%;
+}
+
+#start__form{
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+/*---------フラッシュアニメーション----------*/
+
+#flash{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+#flash.on{
+  display: block;
+}
+
+#flash.on.delete{
+  display: none;
+}
+
+.background-on{
+  background-color: rgba(0,0,0,0.7);
+}
+
+#flash__area{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.flash__obj{
+  position: absolute;
+  top: 40%;
+  right: 0;
+  left: 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+  color: #fff;
+  visibility: hidden;
+}
+
+.animation{
+  visibility: visible;
+}
+
+/*---------ボタン----------*/
+#option{
+  visibility: hidden;
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+}
+
+.optionButton{
+  margin-top: 10px;
+}
+
+#option.on{
+  visibility: visible;
+}
+
+
+
+/*--------正誤------------*/
+
+#result{
+  /* position: absolute; */
+  width: 100%;
+  /* height: 100%; */
+}
+
+.result__content{
+  width: 35%;
+  margin: 0 auto;
+}
+
+#resultMaru{
+  display: none;
+}
+
+#resultBatu{
+  display: none;
+}
+
+#resultMaru.on{
+  display: block;
+  width: 100%;
+}
+
+#resultBatu.on{
+  display: block;
+  width: 100%;
+}
+
+.correctAnswer{
+  background-color: #ffd8b2;
+}
+
+/*-------もう一回----------*/
+
+#again{
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.againButton{
+  background-color: #4999e9;
+  border: none;
+  color: #fff;
+  margin: 0 auto;
+  visibility: hidden;
+}
+
+.againButton.on{
+  visibility: visible;
+}
+
+.againButton:hover{
+  background-color: #fff;
+  color: #4999e9;
+  border: #4999e9 1px solid;
+}
+
+
+@media screen and (min-width:520px) and (max-width: 920px) { 
+  .wrap{
+    width: 520px;
+    margin: 0 auto;
+  }
+  body{
+    background-color: #fff;
+  }
+  #start__today{
+    width: 520px;
+  }
+  #start__form{
+    width: 520px;
+  }
+  #option{
+    width: 520px;
+  }
+  #result{
+    width: 520px;
+  }
+  #again{
+    width: 520px;
+  }
+}
+
+@media screen and (min-width:920px) and (max-width:2000px){
+  #flash{
+    z-index: 999;
+    width: 520px;
+    margin-left: 50px;
+  }
+  .wrap{
+    width: 520px;
+    position: absolute;
+    left: 50px;
+    background-color: #fff;
+  }
+  body{
+    background-color: #fff;
+  }
+  #start__form{
+    width: 520px;
+  }
+  #option{
+    width: 520px;
+  }
+  #again{
+    width: 520px;
+  }
+
+  .qr{
+    display: block;
+    background-color: #4999e9;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  .qrwrap{
+    display: flex;
+  }
+}
