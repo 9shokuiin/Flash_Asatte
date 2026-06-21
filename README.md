@@ -3,3 +3,5 @@
 本多ゼミ学内展示「明後日」出品作品。
 <br>
 日付のフラッシュ暗算を体験できます
+
+URL(https://9shokuiin.github.io/Flash_Asatte/)
